@@ -1,0 +1,160 @@
+a,
+div,
+span,
+p,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // font-family: "FangTi";
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8fa;
+}
+
+// 设置全局滚动条样式
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+// 全局自定义组件样式开始
+.login {
+  .el-input {
+    width: 100%;
+    height: 45px;
+
+    .el-input__wrapper {
+      background-color: transparent;
+    }
+
+    .el-input__inner {
+      font-size: 16px;
+    }
+  }
+}
+
+/* 全局 Tab */
+.el-tabs {
+  .el-tabs__nav-wrap::after {
+    display: none;
+  }
+
+  .el-tabs__item {
+    height: 60px;
+    font-size: 17px;
+  }
+
+  .el-tabs__active-bar {
+    height: 3px;
+    border-radius: 10px;
+  }
+}
+
+/* 全局 Table */
+.el-table {
+  tr {
+    height: 45px;
+  }
+}
+
+/* 全局表单 */
+.el-form-item {
+  position: relative;
+  width: 100%;
+
+  .el-form-item__label {
+    justify-content: flex-start;
+    width: 90px;
+    font-size: 14px;
+  }
+}
+
+.el-form-item.is-required:not(.is-no-asterisk).asterisk-left
+  > .el-form-item__label-wrap
+  > .el-form-item__label:before,
+.el-form-item.is-required:not(.is-no-asterisk).asterisk-left
+  > .el-form-item__label:before {
+  position: absolute;
+  top: 3px;
+  left: -8px;
+}
+
+/* 全局弹窗 */
+.el-dialog {
+  display: flex;
+  flex-direction: column;
+  max-height: 70%;
+
+  .el-dialog__body {
+    flex: 1;
+    height: 0;
+    padding: 10px;
+    overflow-y: scroll;
+    border-top: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+  }
+}
+
+/* 全局穿梭框 */
+.el-transfer {
+  .el-transfer-panel {
+    width: 250px;
+  }
+}
+
+/* 全局树 */
+div.el-tree--highlight-current
+  .el-tree-node.is-current
+  > .el-tree-node__content {
+  color: #fff;
+  background-color: $themeColors;
+  opacity: 0.9;
+
+  i {
+    color: #fff;
+  }
+}
+
+/* 全局菜单 */
+.el-menu-item.is-active {
+  color: #fff;
+  background-color: $themeColors;
+
+  span {
+    color: #fff;
+  }
+
+  svg {
+    fill: #fff;
+  }
+
+  &:hover {
+    background-color: $themeColors;
+  }
+}
